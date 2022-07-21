@@ -1,0 +1,49 @@
+.header {
+    width: 100vw;
+    margin: 0;
+    background-color: $colorBlack;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+
+        &--wrapper {
+            @include flexCenter;
+        }
+    }
+}
+
+.nav {
+    display: flex;
+    justify-content: flex-end;
+
+    &__list {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        @include flexCenter;
+        width: 115px;
+        height: 75px;
+        transition: background-color .3s ease-in-out;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $colorCoral;
+        }
+
+        &:active {
+            background-color: $colorActiveCoral;
+        }
+    }
+
+    &__link {
+        color: $colorWhite;
+        @include fontStyle($fontOpenSans, 600, 14);
+    }
+}

@@ -1,0 +1,59 @@
+.awesome {
+    width: 100vw;
+    padding: 50px 0;
+
+    &__container{
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    &__heading {
+        font-family: $fontRaleway;
+        font-weight: 400;
+        font-size: 36px;
+        display: flex;
+        justify-content: center;
+
+        &-description {
+            font-family: $fontRaleway;
+            font-weight: 400;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            color: $colorGreyText;
+            margin-top: 40px;
+        }
+    }
+
+    &__feature {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        margin-top: 100px;
+    }
+}
+
+.feature {
+
+    &__item {
+        width: 370px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__heading {
+        font-family: $fontOpenSans;
+        font-weight: 700;
+        font-size: 24px;
+        padding: 10px 0;
+    }
+
+    &__content {
+        font-family: $fontRaleway;
+        font-weight: 400;
+        font-size: 18px;
+        margin: 0;
+    }
+}

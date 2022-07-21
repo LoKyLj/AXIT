@@ -1,0 +1,73 @@
+.contact {
+    width: 100vw;
+
+    &__container {
+        padding: 50px 0;
+    }
+
+    &__title {
+
+        &-heading {
+            margin: 50px 0;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+            font-family: $fontRaleway;
+            font-weight: 400;
+            font-size: 36px;
+        }
+
+        &-info {
+            margin: 40px 0;
+            color: $colorGreyText;
+            display: flex;
+            justify-content: center;
+            font-family: $fontRaleway;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+
+    &__reg {
+        display: flex;
+        flex-direction: column;
+
+        &-form {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &-data {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &-item {
+            width: 570px;
+            font-family: $fontOpenSans;
+            font-weight: 400;
+            font-size: 14px;
+            color: $colorGreyOnWhite;
+            border: 0;
+            border-bottom: 1px solid $colorGreyOnWhite;
+            padding-top: 40px;
+            padding-bottom: 15px;
+
+            &:focus {
+                outline: 0;
+                color: $colorDarkGreyBackground;
+                border-bottom: 1px solid $colorGreyText;
+                font-weight: 600;
+            }
+        }
+        
+        .item-message {
+            height: 100%;
+            resize: none;
+        }
+
+        &-button {
+            margin: 50px auto 0;
+        }
+    }
+}

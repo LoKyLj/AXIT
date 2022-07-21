@@ -1,0 +1,47 @@
+.socWeb {
+    width: 100vw;
+    background-color: $colorSocWebBackground;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    &__info {
+        width: 470px;
+
+        &-heading {
+            font-family: $fontOpenSans;
+            font-weight: 700;
+            font-size: 24px;
+        }
+
+        &-descr {
+            font-family: $fontRaleway;
+            font-weight: 400;
+            font-size: 18px;
+            margin-top: 20px;
+            color: $colorGreyText;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+        &-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                padding: 0 50px;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+        }
+    }
+}

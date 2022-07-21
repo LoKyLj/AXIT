@@ -1,0 +1,103 @@
+.intro {
+    width: 100vw;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/intro/aboutBackground.png) no-repeat center center;
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        margin: 200px auto 185px;
+        justify-content: space-between;
+    }
+
+    &__details {
+        width: 670px;
+
+        &-logo {
+            
+            &--AX {
+                height: 55px;
+            }
+
+            &--IT {
+                height: 55px;
+            }
+        }
+
+        &-heading {
+            margin-top: 75px;
+            font-family: $fontRaleway;
+            font-weight: 500;
+            font-size: 48px;
+            color: $colorWhite;
+        }
+
+        &-separator {
+            margin: 50px 0;
+        }
+
+        &-descr {
+            font-family: $fontRaleway;
+            font-weight: 400;
+            font-size: 18px;
+            margin-top: 40px;
+            width: 270px;
+            color: $colorWhite;
+        }
+
+        &-button {
+            margin-top: 40px;
+        }
+    }
+
+    &__reg {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 450px;
+        width: 470px;
+        border-radius: 10px;
+        background-color: $colorWhite;
+
+        &--inner {
+            display: flex;
+            flex-direction: column;
+            width: 370px;
+            margin: 0 auto;
+        }
+
+        &-title {
+            font-family: $fontOpenSans;
+            font-weight: 700;
+            font-size: 24px;
+            text-transform: uppercase;
+            padding: 20px 0 30px;
+
+            &--moded {
+                color: $colorCoral;
+            }
+        }
+
+        &-input {
+            font-family: $fontOpenSans;
+            font-weight: 400;
+            font-size: 14px;
+            color: $colorGreyOnWhite;
+            border: 0;
+            border-bottom: 1px solid $colorGreyOnWhite;
+            padding-top: 40px;
+            padding-bottom: 15px;
+
+            &:focus {
+                outline: 0;
+                color: $colorDarkGreyBackground;
+                border-bottom: 1px solid $colorGreyText;
+                font-weight: 600;
+            }
+        }
+
+        &-button {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+}

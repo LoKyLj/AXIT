@@ -1,0 +1,138 @@
+:root {
+	--large-container: 1200px;
+}
+
+@mixin container {
+	width: var(--large-container);
+	margin: 0 auto;
+	padding: 0 15px;
+
+    @include mediaTablet {
+        width: 984px;
+    }
+
+    @include mediaMobile {
+        width: 100%;
+        padding: 0 20px;
+	}
+}
+
+@mixin posCenter {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@mixin flexCenter {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin fontSize($count) {
+	font-size: calc($count / 16) + rem;
+}
+
+@mixin fontStyle($fontFamily, $fontWeight, $size) {
+	font-family: $fontFamily;
+	@include fontSize($size);
+	font-weight: $fontWeight;
+}
+
+@mixin remLh($count) {
+	line-height: calc($count / 16) + rem;
+}
+
+@mixin placeholder($color, $font: sans-serif, $size: 14px) {
+	&::-placeholder {
+		opacity: 1;
+		text-transform: uppercase;
+		font-family: $font;
+		color: $color;
+		@include fontSize($size);
+	}
+}
+
+@mixin mediaTablet {
+	@media screen and (max-width: 1199px) {
+		@content;
+	}
+}
+
+@mixin mediaMobile {
+	@media screen and (max-width: 1023px) {
+		@content;
+	}
+}
+
+
+// buttons
+
+@mixin button {
+	@include fontStyle($fontOpenSans, 600, 15);
+	height: 60px;
+	border: none;
+	color: $colorWhite;
+	cursor: pointer;
+}
+
+@mixin button--size_m {
+	width: 270px;
+}
+
+@mixin button--size_l {
+	width: 370px;
+}
+
+@mixin button--size_xl {
+	width: 470px;
+}
+
+@mixin button--coral {
+	background-color: $colorCoral;
+	color: $colorWhite;
+	transition: background-color .3s ease-in-out;
+
+	&:hover {
+		background-color: $colorHoverCoral;
+	}
+
+	&:active {
+		background-color: $colorActiveCoral;
+	}
+}
+
+@mixin button--transparent {
+	background-color: transparent;
+	border: 2px solid $colorWhite;
+	transition: color .3s ease-in-out, border .3s ease-in-out, background-color .3s ease-in-out;
+
+	&:hover {
+		color: $colorCoral;
+		border: 2px solid $colorCoral;
+	}
+
+	&:active {
+		color: $colorWhite;
+		background-color: $colorActiveCoral;
+		border: 0px;
+	}
+}
+
+
+// separators
+
+@mixin separator {
+	width: 170px;
+	height: 1px;
+	margin: 50px auto;
+	border: none;
+}
+
+@mixin separator--coral {
+	background-color: $colorCoral;
+}
+
+@mixin separator--grey {
+	background-color: $colorWhite;
+}
